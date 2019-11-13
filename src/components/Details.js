@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {ProductConsumer} from "../context"
 import {Link} from "react-router-dom"
-import {detailProduct} from "../data"
 import {ButtonContainer} from "./Button"
 
 class Details extends Component {
@@ -57,6 +56,7 @@ class Details extends Component {
                             disabled={inCart}
                             onClick={() => {
                               value.addToCart(id)
+                              value.openModal(id)
                             }}>
                           {inCart ? "inCart" : "add to cart"}
                         </ButtonContainer>
